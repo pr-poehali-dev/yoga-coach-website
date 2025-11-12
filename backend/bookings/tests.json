@@ -1,0 +1,25 @@
+{
+  "tests": [
+    {
+      "name": "Get schedule",
+      "method": "GET",
+      "path": "/?action=schedule",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Get classes list",
+      "method": "GET",
+      "path": "/?action=classes",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Create booking with missing fields",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "schedule_id": 1
+      },
+      "expectedStatus": 400
+    }
+  ]
+}
